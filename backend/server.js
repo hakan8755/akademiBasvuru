@@ -19,7 +19,6 @@ const sanatsalfaaliyetlerRoutes= require('./routes/sanatsalfaaliyetler');
 const ilanlarRoutes = require('./routes/ilanlar');
 const puanTablosuRoutes = require('./routes/puantablosu');
 const tablo1Route = require('./routes/tablo1');
-const juriRoutes = require('./routes/juri');
 
 
 const app = express();
@@ -32,7 +31,7 @@ app.use(express.json());
 app.use('/api', auth); // auth için eski rota
 app.use('/api/articleApplication', articleApplicationsRoutes); // makale başvuruları için yeni rota
 app.use('/api/faaliyet', faaliyetRoutes);
-app.use('/api/kitaplar', kitapRoutes);  
+app.use('/api/kitap', kitapRoutes);  
 app.use('/api/atiflar',atiflarRoutes);
 app.use('/api/dersverme', dersvermeRoutes);
 app.use('/api/tezyonetimi', tezyonetimiRoutes);
@@ -45,7 +44,6 @@ app.use('/api/sanatsalfaaliyetler',sanatsalfaaliyetlerRoutes);
 app.use('/api/ilanlar', ilanlarRoutes);
 app.use('/api/puantablosu', puanTablosuRoutes);
 app.use('/api/tablo1', tablo1Route);
-app.use('/api/juri', juriRoutes);
 
 // MongoDB bağlantısı
 mongoose.connect(process.env.MONGO_URI)
@@ -55,3 +53,4 @@ mongoose.connect(process.env.MONGO_URI)
 // Server başlat
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Backend → http://localhost:${PORT}`));
+
