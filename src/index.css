@@ -1,0 +1,305 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f2f4f7;
+}
+
+.header-bar {
+  background-color: #2e8b57;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kou-logo {
+  width: 80px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 28px;
+  color: #2e3a59;
+  margin-bottom: 8px;
+}
+
+.subtext {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.role-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.role-btn {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.role-btn:hover {
+  background-color: #246b45;
+}
+
+.register-link {
+  background-color: transparent;
+  border: 2px solid #2e8b57;
+  color: #2e8b57;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-link:hover {
+  background-color: #2e8b57;
+  color: white;
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e8b57;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-card input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px;
+  /* Göz ikonu için boşluk */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+}
+
+.login-btn {
+  padding: 12px;
+  background-color: #2e8b57;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #246b45;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: #2e8b57;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.page {
+  padding: 20px;
+}
+
+.header-bar-small {
+  background: #2e8b57;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filter-bar select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.ilan-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.ilan-card {
+  /*background: #fff;*/
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform .15s;
+}
+
+.ilan-card:hover {
+  transform: translateY(-4px);
+}
+
+.seviye-badge {
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.ilan-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.ilan-fak {
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.ilan-ul {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  display: flex;
+  justify-content: end;
+}
+
+.drawer {
+  width: 400px;
+  background: #fff;
+  padding: 24px;
+  position: relative;
+  overflow: auto;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 22px;
+  background: none;
+  border: none;
+}
+
+.kriter-box {
+  background: #f6f9fb;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 14px 0;
+}
+
+.dokuman-link {
+  color: #2e8b57;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.basvur-btn {
+  width: 100%;
+  background: #2e8b57;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}

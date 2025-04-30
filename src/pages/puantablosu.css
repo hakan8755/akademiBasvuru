@@ -1,0 +1,15 @@
+
+
+.puan-tablosu-modern table {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .puan-tablosu-modern h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
