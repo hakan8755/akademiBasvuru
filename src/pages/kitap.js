@@ -1,4 +1,3 @@
-// Kitap.jsx - kişi sayısına göre k katsayısı ile puan hesaplama
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/toplanti.css';
@@ -16,9 +15,8 @@ const kitapFaaliyetleri = [
 
 const kitapPuanlari = { 1: 60, 2: 20, 3: 5, 4: 40, 5: 10, 6: 15, 7: 6, 8: 3 };
 
-function Kitap() {
+export default function Kitap() {
   const navigate = useNavigate();
-
   const [kitaplar, setKitaplar] = useState(
     kitapFaaliyetleri.map((tip, index) => ({
       id: index + 1,
@@ -73,9 +71,7 @@ function Kitap() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const yapilanKitaplar = kitaplar.filter(k => !k.skipped);
-
     const toplamPuan = yapilanKitaplar.reduce((sum, k) => {
       const base = kitapPuanlari[k.id] || 0;
       const kCarpan = calculateK(k.authorCount || 1);
@@ -83,33 +79,27 @@ function Kitap() {
     }, 0);
 
     try {
-      localStorage.setItem('bolumC_toplam', toplamPuan);
-
       const formData = new FormData();
       formData.append('kitaplar', JSON.stringify(yapilanKitaplar));
       formData.append('kitaplarToplamPuan', toplamPuan);
+      formData.append('userId', localStorage.getItem('userId') || 'test-user'); // 🔴 GEREKLİ!
 
       yapilanKitaplar.forEach(kitap => {
         kitap.files.forEach(file => formData.append('files', file));
       });
 
-      const response = await fetch('http://localhost:5000/api/kitaplar', {
+      const response = await fetch('http://localhost:5000/api/kitap', {
         method: 'POST',
         body: formData
       });
 
-      const contentType = response.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        const data = await response.json();
-        if (response.ok) {
-          alert(`Başarıyla kaydedildi. Kitaplar puanı: ${toplamPuan}`);
-          navigate("/atıflar");
-        } else {
-          alert('Sunucu hatası oluştu.');
-        }
+      if (response.ok) {
+        alert(`Başarıyla kaydedildi. Kitaplar puanı: ${toplamPuan}`);
+        navigate('/atıflar');
       } else {
-        const text = await response.text();
-        console.error('Sunucudan beklenmeyen yanıt:', text);
+        const errorText = await response.text();
+        console.error('Sunucu yanıtı:', errorText);
+        alert('Sunucu hatası oluştu.');
       }
     } catch (err) {
       console.error('Gönderim hatası:', err);
@@ -174,5 +164,3 @@ function Kitap() {
     </div>
   );
 }
-
-export default Kitap;
