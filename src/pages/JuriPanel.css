@@ -1,0 +1,106 @@
+/* JuriPanel.css – v2 */
+:root{
+    --clr-bg: #f1f4f9;
+    --clr-white: #ffffff;
+    --clr-border: #e5e7eb;
+    --clr-text-main: #1f2937;
+    --clr-text-muted: #6b7280;
+    --clr-primary: #047857;
+    --clr-primary-dim: #065f46;
+    --radius: 8px;
+    --transition: .18s ease;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    
+    /* sayfa zemin & genel */
+    .juri-page{min-height:100vh;background:var(--clr-bg);}
+    
+    /* ---------------- Header ---------------- */
+    .juri-head{
+    position:sticky; top:0; z-index:20;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 24px;background:var(--clr-white);
+    box-shadow:0 2px 6px rgba(0,0,0,.05);
+    }
+    .juri-head h1{font-size:22px;font-weight:600;color:var(--clr-text-main);margin:0;}
+    
+    /* ---------------- Arama kutusu ---------------- */
+    .searchbox{position:relative;}
+    .searchbox input{
+    padding:8px 40px 8px 14px;
+    border:1px solid var(--clr-border);
+    border-radius:var(--radius);
+    font-size:14px; outline:none;
+    transition:border var(--transition), box-shadow var(--transition);
+    background:#fafafa;
+    }
+    .searchbox input:focus{
+    border-color:var(--clr-primary);
+    box-shadow:0 0 0 2px rgba(4,120,87,.15);
+    }
+    .searchbox .icon{
+    position:absolute;right:12px;top:50%;transform:translateY(-50%);
+    color:var(--clr-text-muted);pointer-events:none;
+    }
+    
+    /* ---------------- Tablo ---------------- /
+    .table{
+    width:100%;border-collapse:collapse;
+    background:var(--clr-white);margin-top:12px;
+    box-shadow:0 1px 4px rgba(0,0,0,.04);border-radius:var(--radius);overflow:hidden;
+    }
+    thead tr{background:#fafafa;}
+    th,td{padding:13px 16px;border-bottom:1px solid var(--clr-border);font-size:14px;text-align:left;}
+    th{font-weight:600;color:var(--clr-text-main);}
+    tbody tr:hover{background:#f9fafb; transition:background var(--transition);}
+    tbody tr:nth-child(even){background:#fcfcfc;} / zebra */
+    
+    /* “İncele” butonu */
+    td.action button{
+    background:none;border:1px solid transparent;
+    color:var(--clr-primary);cursor:pointer;
+    display:flex;align-items:center;gap:6px;font-size:14px;
+    padding:6px 10px;border-radius:var(--radius);
+    transition:background var(--transition), color var(--transition), border var(--transition);
+    }
+    td.action button:hover{
+    background:rgba(4,120,87,.07);border-color:rgba(4,120,87,.15);
+    }
+    
+    /* Durum rozetleri */
+    .badge{
+    display:inline-block;min-width:92px;text-align:center;
+    padding:4px 10px;border-radius:999px;font-size:12px;font-weight:500;
+    }
+    .badge.pending{background:#fef3c7;color:#92400e;}
+    .badge.sent{background:#d1fae5;color:#065f46;}
+    .badge.accepted{background:#def7ec;color:#064e3b;}
+    .badge.rejected{background:#fee2e2;color:#991b1b;}
+    
+    /* “Veri yok” metni */
+    .muted{color:var(--clr-text-muted);font-size:15px;}
+    
+    /* ---------------- Skeleton ---------------- */
+    .skeleton-row{
+    height:20px;margin-bottom:10px;border-radius:var(--radius);
+    background:linear-gradient(90deg,#e5e7eb 25%,#f3f4f6 50%,#e5e7eb 75%);
+    background-size:200% 100%;animation:shimmer 1.3s infinite;
+    }
+    @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+    
+    /* ---------------- Mobil uyum ---------------- */
+    @media(max-width:680px){
+    .table, thead, tbody, th, td, tr{display:block;width:100%;}
+    thead{display:none;}
+    tbody tr{
+    background:var(--clr-white);margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);border-radius:var(--radius);
+    overflow:hidden;
+    }
+    td{border:none;border-bottom:1px solid var(--clr-border);}
+    td:last-child{border-bottom:none;}
+    td[data-label]::before{
+    content:attr(data-label) " ";
+    font-weight:600;color:var(--clr-text-muted);display:block;margin-bottom:4px;
+    }
+    }

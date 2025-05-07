@@ -1,0 +1,59 @@
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 50;
+  }
+  
+  .drawer {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    position: relative;
+    overflow-y: auto;
+  }
+  
+  .close-btn {
+    position: absolute; top: 1rem; right: 1rem;
+    background: none; border: none; cursor: pointer;
+    color: var(--text-muted);
+  }
+  
+  .drawer-subtitle {
+    margin: .5rem 0 1.5rem;
+    color: var(--text-muted);
+    font-size: .9rem;
+  }
+  
+  .kriter {
+    background: #f6f9fb;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .kriter h4 {
+    margin: 0 0 .75rem;
+    color: var(--text-main);
+  }
+  .kriter ul {
+    list-style: none; padding: 0; margin: 0;
+    font-size: .875rem;
+    color: var(--text-muted);
+  }
+  .kriter li + li { margin-top: .5rem; }
+  
+  .pdf-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: 500;
+  }
+  
+  .drawer-desc {
+    line-height: 1.6;
+    color: var(--text-main);
+  }
+  

@@ -1,0 +1,122 @@
+/* src/pages/IlanPage.css */
+.ilan-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.ilan-header {
+  background-color: #047857;
+  color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ilan-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.ilan-header p {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.ilan-filters {
+  margin-bottom: 16px;
+}
+
+.ilan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.no-result {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.ilan-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 6px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.ilan-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.ilan-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.badge-dr {
+  background-color: #10b981 !important;
+}
+
+/* yeşil */
+.badge-doc {
+  background-color: #dc2626 !important;
+}
+
+/* kırmızı */
+.badge-prof {
+  background-color: #7c3aed !important;
+}
+
+/* mor */
+
+.ilan-birim {
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.ilan-right {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #c9302c;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

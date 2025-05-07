@@ -1,0 +1,42 @@
+.detay-container {
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+.aday-karti {
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.kategori {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #fff;
+    border-left: 4px solid #007bff;
+}
+
+.kategori h4 {
+    margin-bottom: 0.5rem;
+}
+
+.kategori ul {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.kategori ul li {
+    padding: 0.25rem 0;
+}
+
+.back-button {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,70 @@
+/* juri-atama.css */
+.juri-atama {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.juri-atama h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a202c;
+}
+
+.juri-atama h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #2d3748;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.juri-atama ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.juri-atama li {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.juri-atama label {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.juri-atama input[type="checkbox"] {
+    margin-right: 0.8rem;
+    transform: scale(1.2);
+}
+
+.juri-atama button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.juri-atama button:hover {
+    background-color: #0056b3;
+}
